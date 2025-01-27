@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="styles/test.css" />
+        <link rel="stylesheet" href="styles/modal-window-test.css" />
+        <title>PROD 2</title>
+    </head>
+    <body>
+        <div class="left-and-right">
+            <div class="left-part">
+                <div class="left-top-part">
+                    <button test-id="back-to-test-list-page" class="button-to-tests">Тесты</button>
+                </div>
+                <div class="left-bottom-part" test-id="navigation">
+                    <!-- Навигационные кнопки будут добавлены динамически -->
+                </div>
+            </div>
+            <div class="right-part">
+                <h2 class="title-test" test-id="test-title">Заголовок</h2>
+                <div class="question-part" test-id="question">
+                    <h2 class="question-text">Заголовок</h2>
+                    <div class="questions" test-id="question-options">
+                        <!-- Варианты ответов будут добавлены динамически -->
+                    </div>
+                </div>
+                <div class="controls">
+                    <button class="button-control" test-id="prev-question">⬅</button>
+                    <button class="button-control" test-id="next-question">⮕</button>
+                </div>
+                <button class="button-stop" test-id="finish-button">Завершить</button>
+                <button class="button-reset" test-id="reset-test-button" style="display: none;">Пройти тест заново</button>
+            </div>
+        </div>
+        <!-- Модальное окно -->
+        <div class="modal-behind" test-id="modal">
+            <div class="modal">
+                <div class="complete-test">
+                    <h2 class="title-modal">Вы завершили тест</h2>
+                    <div class="results">
+                        <label>Правильных ответов - <span id="correct-answers">0</span></label>
+                        <label>Неправильных ответов - <span id="wrong-answers">0</span></label>
+                        <label id="unanswered-label">Вопросов без ответа - <span id="unanswered-questions">0</span></label>
+                    </div>
+                    <button class="understand">Понятно</button>
+                </div>
+                <div class="confirmation-modal">
+                    <h2 class="title-modal-text" id="confirmation-title">Вы точно хотите завершить тест?</h2>
+                    <div class="buttons-modal">
+                        <button class="antwort" id="yes-action">Да</button>
+                        <button class="antwort" id="no-action">Нет</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Если testId не передан, перенаправляем на главную страницу
+            const urlParams = new URLSearchParams(window.location.search);
+            const testId = urlParams.get('testId');
+    
+            if (!testId) {
+                window.location.href = 'list-test.html';
+            }
+        </script>
+        <script src="scripts/test.js"></script>
+    </body>
+</html>

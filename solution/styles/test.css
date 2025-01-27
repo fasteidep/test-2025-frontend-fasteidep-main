@@ -1,0 +1,209 @@
+.left-and-right {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.left-part {
+    width: 167px;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.left-top-part{
+    height: 88px;
+}
+.button-to-tests{
+    width: 80px;
+    height: 40px;
+    border: 1px solid var(--color-border-color);
+    border-radius: 6px;
+    margin-top: 16px;
+}
+.left-bottom-part{
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--color-border-color);
+    border-radius: 6px;
+    margin-bottom: 16px;
+    min-height: 854px;
+}
+.button-list-elem{
+    border: 1px solid var(--color-border-color);
+    width:133px;
+    height: 40px;
+    margin: 8px;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 40px;
+    border-radius: 6px;
+}
+.right-part {
+    display: flex;
+    align-items: center; /* Центрируем по вертикали внутри контейнера */
+    flex-direction: column; /* Элементы располагаются вертикально */
+    flex-grow: 1; /* Занимает оставшееся пространство */
+    width: 100%; /* Занимает всю ширину родительского контейнера */
+}
+
+.title-test{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 25px;
+    margin-top: 287px;
+}
+.question-part{
+    margin-top: 64px;
+    max-width: 751px;
+    border: 1px solid var(--color-border-color);
+    border-radius: 16px;
+    display: block;
+    min-height: 154px;
+}
+.question-text{
+    margin-top:40px;
+    text-align: center;
+}
+.questions{
+    margin-top:20px;
+    display: flex;
+    flex-direction: row;
+    gap:16px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.question-button {
+    padding: 8px 16px; /* Подбираем паддинги */
+    border: 1px solid var(--color-border-color);
+    border-radius: 6px;
+    line-height: 1; /* Высота строки */
+    text-align: center; /* Выравнивание текста по центру */
+    white-space: nowrap; /* Запрет переноса текста */
+    box-sizing: border-box; /* Учитываем padding и border в размерах */
+}
+
+.controls{
+    display: flex;
+    flex-direction: row;
+    gap:24px;
+    margin-top:64px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.button-control{
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--color-border-color);
+    border-radius: 50%;
+    font-size: 30px;
+}
+.button-stop{
+    padding: 9px 14px;
+    border: 1px solid var(--color-border-color);
+    border-radius: 6px;
+    font-weight: 500;
+    margin-top: 64px;
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.button-stop:hover{
+    background-color: var(--color-hover-state);
+}
+.button-reset{
+    padding: 9px 14px;
+    border: 1px solid var(--color-border-color);
+    border-radius: 6px;
+    font-weight: 500;
+    margin-top: 64px;
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.button-reset:hover{
+    background-color: var(--color-hover-state);
+}
+@media (max-width: 800px) {
+    .title-test{
+        margin-top:108px;
+    }
+}
+@media (max-width: 600px) {
+    .left-bottom-part {
+        display: none; /* Скрываем левую часть на мобильных устройствах */
+    }
+
+    .left-and-right {
+        flex-direction: column; /* Меняем направление на вертикальное */
+    }
+
+    .left-part {
+        max-height: 56px; /* Уменьшаем высоту левой части */
+    }
+
+    .right-part {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-grow: 0;
+    }
+
+    .title-test {
+        margin-top: 20px; /* Уменьшаем отступ сверху */
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(100% - 32px); /* Учитываем отступы по бокам */
+        font-size: 20px; /* Уменьшаем размер шрифта */
+    }
+
+    .question-part {
+        margin-top: 20px; /* Уменьшаем отступ сверху */
+        margin-left: 16px;
+        margin-right: 16px;
+        width: calc(100% - 32px); /* Учитываем отступы по бокам */
+        padding: 12px; /* Уменьшаем паддинги */
+        border: 1px solid var(--color-border-color);
+        border-radius: 16px;
+    }
+
+    .question-text {
+        text-align: center;
+        margin-top: 16px; /* Уменьшаем отступ сверху */
+    }
+
+    .questions {
+        display: flex;
+        flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+        gap: 8px; /* Уменьшаем расстояние между элементами */
+        justify-content: center;
+
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .question-button {
+        padding: 8px 13px;
+    }
+
+    .controls {
+        display: none; /* Скрываем кнопки управления на мобильных устройствах */
+    }
+
+    .button-stop {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        font-size: 16px; /* Уменьшаем размер шрифта */
+    }
+
+    .button-reset {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        font-size: 16px; /* Уменьшаем размер шрифта */
+    }
+}

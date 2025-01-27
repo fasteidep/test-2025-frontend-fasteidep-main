@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prod</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="styles/list.css" />
+    <link rel="stylesheet" href="styles/modal-icon.css" />
+</head>
+<body>
+    <h1 test-id="list-title" class="title">Добро пожаловать</h1>
+    <p test-id="list-subtitle" class="subtitle">Сайт посвящен прохождению тестов. Выберите тест, который хотите пройти.</p>
+    <div test-id="list-items" class="list-test">
+        <!-- Тесты тут -->
+    </div>
+
+    <!-- Модальное окно -->
+    <div class="modal" test-id="form-modal">
+        <div class="modal-content">
+            <h2 class="title-form" test-id="form-title">Создание теста</h2>
+            <form class="test-form">
+                <label class="plese-name-test">Укажите название теста</label>
+                <input type="text" id="new-test-title" test-id="new-test-title" class="name-test">
+                <div class="questions-container">
+                    <label>Вопрос 1</label>
+                    <input type="text" test-id="new-test-question" class="question-input">
+                    <div class="question-group">
+                        <div class="input-grid" test-id="new-test-options">
+                            <div class="option">
+                                <input type="radio" name="question-1" value="1">
+                                <input type="text">
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question-1" value="2">
+                                <input type="text">
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question-1" value="3">
+                                <input type="text">
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="question-1" value="4">
+                                <input type="text"> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <label class="Error-form">Ошибка</label>
+                <button type="submit" test-id="save-button" class="save-button">Сохранить</button>
+                <!-- Кнопки "+" и "-" -->
+                <div class="controls">
+                    <button type="button" test-id="add-question-button" class="add-question-button">+</button>
+                    <button type="button" test-id="remove-question-button" class="remove-question-button">-</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <button test-id="list-add-button" class="add-test-button">+</button>
+    <script src="scripts/list.js"></script>
+    <script src="scripts/modal-icon.js"></script>
+</body>
+</html>
